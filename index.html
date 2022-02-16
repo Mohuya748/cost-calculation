@@ -5,11 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cost Calculation</title>
+    <!-- tailwind cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css link -->
     <link rel="stylesheet" href="style.css">
+    <!-- font awesome kit -->
+    <script src="https://kit.fontawesome.com/1d85e9680c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <header>
+        <h1 class="text-5xl text-center mt-6 text-indigo-600 font-bold">Cost Calculation <i class="fa-solid fa-hand-holding-dollar"></i></h1>
+    </header>
+    <main class="grid lg:grid-cols-2 md:grid-cols-1 gap-12 text-center w-5/6 mx-auto mt-12">
+        <section class="">
+            <img src="images/money.jpg" alt="money cover">
+        </section>
+        <section class="bg-slate-100">
+            <div class="text-center w-3/4 mx-auto mt-8 ">
+                <h1 class="block m-6 text-4xl font-semibold text-black">Income</h1>
+                <label for="income" class="text-black text-2xl font-semibold">Income:</label>
+                <input id="" type="number" name="income" class="mb-4 mx-auto border-bfocus:outline-none w-3/4 p-1">
+                <h1 class="block m-6 text-4xl font-semibold text-black">Expenses</h1>
+                <label for="food" class="text-black text-2xl font-semibold">Food:</label>
+                <input id="" type="number" name="food" class="mb-4 mx-auto border-bfocus:outline-none w-3/4 p-1">
+                <label for="rent" class="text-black text-2xl font-semibold">Rent:</label>
+                <input id="" type="number" name="rent" class="mb-4 mx-auto border-bfocus:outline-none w-3/4 p-1">
+                <label for="cloths" class="text-black text-2xl font-semibold">Cloths:</label>
+                <input id="" type="number" name="cloths" class="mb-4 mx-auto border-bfocus:outline-none w-3/4 p-1">
+                
+                <button id="" class="bg-slate-400 px-6 py-2 rounded border-2 border-white font-semibold ">Calculate
+                </button>
+                <h2 class="block m-6 text-2xl font-semibold text-black">Total expenses :<span>0000</span></h1>
+                    <h2 class="block m-6 text-2xl font-semibold text-black">Balance :<span>0000</span></h1>
+            </div>
+            <div class="text-center w-3/4  mx-auto mt-8 "> 
+               
+                <label for="save" class="text-black text-2xl font-semibold">Save:</label>
+                <input id="" type="number" name="save" class="mb-4 mx-auto border-bfocus:outline-none w-2/5 p-1"><span> % </span>
+                <button id="" class="bg-slate-400 px-6 py-2 rounded border-2 border-white font-semibold ">Save
+                </button>
+                <h2 class="block m-6 text-2xl font-semibold text-black">Saving Amount :<span>0000</span></h1>
+                    <h2 class="block m-6 text-2xl font-semibold text-black">Remaining Balance :<span>0000</span></h1>
+            </div>
+
+        </section>
+    </main>
 
 
 
