@@ -46,22 +46,30 @@
                 <h2 class="block m-6 text-2xl font-semibold text-black">Total expenses :<span
                         id="total-expenses">0000</span></h1>
                     <h2 class="block m-6 text-2xl font-semibold text-black">Balance :<span id="balance">0000</span></h1>
+
+            </div>
+            <div class="error-section">
+                <p id="error-msg" class="error"> Please give a valid number and try again:(</p>
+                <p id="error-msg-income" class="error">your income can't be less than your expenses! Please give a valid
+                    number:(</p>
             </div>
             <div class="text-center w-3/4  mx-auto mt-8 ">
-
                 <label for="save" class="text-black text-2xl font-semibold">Save:</label>
-                <input id="save-input" type="number" name="save" class="mb-4 mx-auto border-bfocus:outline-none w-2/5 p-1"><span>
+                <input id="save-input" type="number" name="save"
+                    class="mb-4 mx-auto border-bfocus:outline-none w-2/5 p-1"><span>
                     % </span>
                 <button id="" onclick="save()"
                     class="bg-slate-400 px-6 py-2 rounded border-2 border-white font-semibold ">Save
                 </button>
-                <h2 class="block m-6 text-2xl font-semibold text-black">Saving Amount :<span id="saving-amount">0000</span></h1>
-                    <h2 class="block m-6 text-2xl font-semibold text-black">Remaining Balance :<span id="remaining-balance">0000</span></h1>
+                <h2 class="block m-6 text-2xl font-semibold text-black">Saving Amount :<span id="saving-amount">0</span>
+                    </h1>
+
+                    <h2 class="block m-6 text-2xl font-semibold text-black">Remaining Balance :<span
+                            id="remaining-balance">0</span></h1>
             </div>
 
         </section>
     </main>
-
 
 
     <script src="script.js"></script>

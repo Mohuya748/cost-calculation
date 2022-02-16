@@ -1,3 +1,17 @@
 .fa-solid{
     color: gold;
 }
+.error {
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    background: #f32121f1;
+    margin-top: 20px;
+    border-radius: 15px;
+    padding: 5px 20px;
+    display: none;
+}
+.error-section{
+    width: 35%;
+    margin: 0 auto;
+}
