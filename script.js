@@ -10,6 +10,7 @@ let savingAmount = document.getElementById("saving-amount");
 let lastBalance = document.getElementById("remaining-balance");
 const errorMsg = document.getElementById("error-msg");
 const errorMsgSaving = document.getElementById("error-msg-saving");
+const errorMsgNeg = document.getElementById("error-msg-negative");
 //----------- function for adding value ------------
 function addValue(firstValue, secondValue, thirdValue) {
     let add = parseFloat(firstValue) + parseFloat(secondValue) + parseFloat(thirdValue);
@@ -32,32 +33,39 @@ function calculate() {
             balance.innerText = leftBalance;
         }
         else {
-            alert("expenses can't be greater than income. Please give a valid input in each field.");
+            errorMsg.style.display = 'block';
             totalExpenses.innerText = 0;
             balance.innerText = 0;
         }
     }
     else {
+
         totalExpenses.innerText = 0;
         balance.innerText = 0;
-        errorMsg.style.display = 'block';
-        
+        errorMsg.style.display = 'none';
+        alert("Please give a positive number in each field.");
     }
 }
 
 //--------- save button -----------
 function save() {
-    totalSave = inputValue("income-input") * (inputValue("save-input") / 100);
-    savingAmount.innerText = totalSave.toFixed(2);
-    remainBalance = minusValue(inputValue("income-input"), addValue(savingAmount.innerText, totalExpenses.innerText, 0));
-    if (totalSave < balance.innerText) {
-        errorMsgSaving.style.display = 'none';
-        lastBalance.innerText = remainBalance.toFixed(2);
+    if(inputValue("save-input")>0){
+        errorMsgNeg.style.display = 'none';
+        totalSave = inputValue("income-input") * (inputValue("save-input") / 100);
+        savingAmount.innerText = totalSave.toFixed(2);
+        remainBalance = minusValue(inputValue("income-input"), addValue(savingAmount.innerText, totalExpenses.innerText, 0));
+        if (totalSave < balance.innerText) {
+            errorMsgSaving.style.display = 'none';
+            lastBalance.innerText = remainBalance.toFixed(2);
+        }
+        else {
+            errorMsg.style.display = 'none';
+            errorMsgSaving.style.display = 'block';
+            // savingAmount.innerText = 0;
+            lastBalance.innerText = 0;
+        }
     }
-    else {
-        errorMsg.style.display = 'none';
-        errorMsgSaving.style.display = 'block';
-        savingAmount.innerText = 0;
-        lastBalance.innerText = 0;
-    }
+   else{
+    errorMsgNeg.style.display = 'block';
+   }
 }

@@ -54,7 +54,7 @@
                 </button>
                 <!-- error handelling  -->
                 <div class="error-section">
-                    <p id="error-msg" class="error "><i class="fa-solid fa-square-xmark"></i> Please give a positive number in each field.</p>
+                    <p id="error-msg" class="error "><i class="fa-solid fa-square-xmark"></i> expenses can't be greater than income. Please give a valid input in each field.</p>
                 </div>
 
                 <h2 class="block m-6 text-2xl font-semibold text-black">Total expenses :<span
@@ -62,13 +62,7 @@
                     <h2 class="block m-6 text-2xl font-semibold text-black">Balance :<span id="balance">0</span></h1>
 
             </div>
-            <!-- error handelling  -->
-            <div class="error-section">
-                <p id="error-msg-saving" class="error">Sorry!! you don't have enough money to save:(</p>
-            </div>
-
-
-
+           
             <!-- saving section  -->
             <div class="text-center w-3/4  mx-auto mt-8 ">
                 <label for="save" class="text-black text-2xl font-semibold">Save:</label>
@@ -78,6 +72,11 @@
                 <button id="" onclick="save()"
                     class="bg-slate-400 px-6 py-2 rounded border-2 border-white font-semibold ">Save
                 </button>
+                 <!-- error handelling  -->
+            <div class="error-section">
+                <p id="error-msg-saving" class="error">Sorry!! you don't have enough money to save:(</p>
+                <p id="error-msg-negative" class="error">saving amount can't be a negative number! try again.</p>
+            </div>
                 <h2 class="block m-6 text-2xl font-semibold text-black">Saving Amount :<span id="saving-amount">0</span>
                     </h1>
 
