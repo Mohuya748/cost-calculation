@@ -34,8 +34,8 @@ function calculate() {
         }
         else {
             errorMsg.style.display = 'block';
-            totalExpenses.innerText = 0;
-            balance.innerText = 0;
+            totalExpenses.innerText = "";
+            balance.innerText = "";
         }
     }
     else {
@@ -54,15 +54,14 @@ function save() {
         totalSave = inputValue("income-input") * (inputValue("save-input") / 100);
         savingAmount.innerText = totalSave.toFixed(2);
         remainBalance = minusValue(inputValue("income-input"), addValue(savingAmount.innerText, totalExpenses.innerText, 0));
-        if (totalSave < balance.innerText) {
+        if (totalSave <= balance.innerText) {
             errorMsgSaving.style.display = 'none';
             lastBalance.innerText = remainBalance.toFixed(2);
         }
         else {
             errorMsg.style.display = 'none';
             errorMsgSaving.style.display = 'block';
-            // savingAmount.innerText = 0;
-            lastBalance.innerText = 0;
+            lastBalance.innerText = "";
         }
     }
    else{

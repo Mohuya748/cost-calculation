@@ -28,55 +28,55 @@
         <!-- calculate section  -->
         <section class="bg-slate-100">
             <!-- income & expenses section -->
-            <div class="text-center w-3/4 mx-auto mt-8 ">
+            <div class="text-center w-5/6 mx-auto mt-8 ">
                 <h1 class="block m-6 text-4xl font-semibold text-black">Income</h1>
                 <label for="income" class="text-black text-2xl font-semibold">Income:</label>
                 <input id="income-input" type="number" name="income"
-                    class="mb-4 mx-auto border-bfocus:outline-none w-3/4 p-1">
+                    class=" w-full mb-4 mx-auto border-bfocus:outline-none p-1 rounded-md border-2 border-green-500 text-center font-semibold">
                 <h1 class="block m-6 text-4xl font-semibold text-black">Expenses</h1>
                 <div>
                     <label for="food" class=" text-black text-2xl font-semibold">Food:</label>
                     <input id="food-input" type="number" name="food"
-                        class=" mb-4 mx-auto border-bfocus:outline-none w-3/4 p-1 ">
+                        class=" w-full mb-4 mx-auto border-bfocus:outline-none p-1 rounded-md border-2 border-green-500 text-center font-semibold">
                 </div>
                 <div>
                     <label for="rent" class="text-black text-2xl font-semibold">Rent:</label>
                     <input id="rent-input" type="number" name="rent"
-                        class="mb-4 mx-auto border-bfocus:outline-none w-3/4 p-1">
+                        class=" w-full mb-4 mx-auto border-bfocus:outline-none p-1 rounded-md border-2 border-green-500 text-center font-semibold">
                 </div>
                 <div>
                     <label for="cloths" class="text-black text-2xl font-semibold">Cloths:</label>
                     <input id="cloths-input" type="number" name="cloths"
-                        class="mb-4 mx-auto border-bfocus:outline-none w-3/4 p-1">
+                        class="w-full mb-4 mx-auto border-bfocus:outline-none p-1 rounded-md border-2 border-green-500 text-center font-semibold">
                 </div>
                 <button id="" onclick="calculate()"
-                    class="bg-slate-400 px-6 py-2 rounded border-2 border-white font-semibold ">Calculate
+                    class="bg-slate-400 px-6 py-2 rounded border-2 border-white font-semibold hover:bg-green-400">Calculate
                 </button>
                 <!-- error handelling  -->
                 <div class="error-section">
-                    <p id="error-msg" class="error "><i class="fa-solid fa-square-xmark"></i> expenses can't be greater than income. Please give a valid input in each field.</p>
+                    <p id="error-msg" class="error "><i class="fa-solid fa-square-xmark"></i> expenses can't be greater
+                        than income. Please give a valid input in each field.</p>
                 </div>
-
                 <h2 class="block m-6 text-2xl font-semibold text-black">Total expenses :<span
                         id="total-expenses">0</span></h1>
                     <h2 class="block m-6 text-2xl font-semibold text-black">Balance :<span id="balance">0</span></h1>
 
             </div>
-           
+
             <!-- saving section  -->
             <div class="text-center w-3/4  mx-auto mt-8 ">
                 <label for="save" class="text-black text-2xl font-semibold">Save:</label>
                 <input id="save-input" type="number" name="save"
-                    class="mb-4 mx-auto border-bfocus:outline-none w-2/5 p-1"><span>
+                    class="mb-4 mx-auto border-bfocus:outline-none w-2/5 p-1 rounded-md border-2 border-green-500"><span>
                     % </span>
                 <button id="" onclick="save()"
-                    class="bg-slate-400 px-6 py-2 rounded border-2 border-white font-semibold ">Save
+                    class="bg-slate-400 px-6 py-2 rounded border-2 border-white font-semibold hover:bg-green-400">Save
                 </button>
-                 <!-- error handelling  -->
-            <div class="error-section">
-                <p id="error-msg-saving" class="error">Sorry!! you don't have enough money to save:(</p>
-                <p id="error-msg-negative" class="error">saving amount can't be a negative number! try again.</p>
-            </div>
+                <!-- error handelling  -->
+                <div class="error-section">
+                    <p id="error-msg-saving" class="error">Sorry!! you don't have enough money to save:(</p>
+                    <p id="error-msg-negative" class="error">saving amount can't be a negative number! try again.</p>
+                </div>
                 <h2 class="block m-6 text-2xl font-semibold text-black">Saving Amount :<span id="saving-amount">0</span>
                     </h1>
 
