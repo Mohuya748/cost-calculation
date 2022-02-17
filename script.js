@@ -40,8 +40,8 @@ function calculate() {
     }
     else {
 
-        totalExpenses.innerText = 0;
-        balance.innerText = 0;
+        totalExpenses.innerText = "";
+        balance.innerText = "";
         errorMsg.style.display = 'none';
         alert("Please give a positive number in each field.");
     }
