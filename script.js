@@ -8,6 +8,7 @@ let saveInput = document.getElementById("save-input");
 let savingAmount = document.getElementById("saving-amount");
 let lastBalance = document.getElementById("remaining-balance");
 const errorMsg = document.getElementById("error-msg");
+const errorMsgSaving = document.getElementById("error-msg-saving");
 
 function addValue(firstValue, secondValue, thirdValue) {
     let add = parseFloat(firstValue) + parseFloat(secondValue) + parseFloat(thirdValue);
@@ -20,8 +21,8 @@ function minusValue(firstValue, secondValue) {
 
 function calculate() {
 
-    if (incomeInput.value >= 0 && foodInput.value >= 0 && rentInput.value >= 0 && clothsInput.value >= 0) {
-        errorMsg.style.display = 'none';
+    if (incomeInput.value>0 && foodInput.value > 0 && rentInput.value>0 && clothsInput.value>0) {
+        errorMsg.style.display = 'none';  
         let expenses = addValue(foodInput.value, rentInput.value, clothsInput.value);
         totalExpenses.innerText = expenses;
         let leftBalance = minusValue(incomeInput.value, totalExpenses.innerText);
@@ -29,7 +30,7 @@ function calculate() {
             balance.innerText = leftBalance;
         }
         else {
-            alert("Please give a valid number:(");
+            alert("Please give a valid input:(");
             totalExpenses.innerText = 0;
         }
     }
@@ -44,7 +45,13 @@ function calculate() {
 
 function save() {
     totalSave = parseFloat(incomeInput.value) * (parseFloat(saveInput.value) / 100);
-    savingAmount.innerText = totalSave;
+    savingAmount.innerText = totalSave.toFixed(2);
     remainBalance = minusValue(incomeInput.value, addValue(savingAmount.innerText, totalExpenses.innerText, 0));
-    lastBalance.innerText = remainBalance;
+    if(totalSave<balance.innerText){
+        lastBalance.innerText = remainBalance.toFixed(2);
+    }
+   else{
+    errorMsgSaving.style.display = 'block';
+    lastBalance.innerText = 0;
+   }
 }
