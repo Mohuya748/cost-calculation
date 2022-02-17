@@ -24,7 +24,7 @@ function minusValue(firstValue, secondValue) {
 }
 //--------------calculate button -----------
 function calculate() {
-    if (inputValue("income-input")>0 && inputValue("food-input")>0 && inputValue("rent-input")>0 && inputValue("cloths-input")>0) {
+    if (inputValue("income-input") > 0 && inputValue("food-input") > 0 && inputValue("rent-input") > 0 && inputValue("cloths-input") > 0) {
         errorMsg.style.display = 'none';
         let expenses = addValue(inputValue("food-input"), inputValue("rent-input"), inputValue("cloths-input"));
         totalExpenses.innerText = expenses;
@@ -49,7 +49,7 @@ function calculate() {
 
 //--------- save button -----------
 function save() {
-    if(inputValue("save-input")>0){
+    if (inputValue("save-input") > 0) {
         errorMsgNeg.style.display = 'none';
         totalSave = inputValue("income-input") * (inputValue("save-input") / 100);
         savingAmount.innerText = totalSave.toFixed(2);
@@ -64,10 +64,10 @@ function save() {
             lastBalance.innerText = "";
         }
     }
-   else{
-    errorMsgSaving.style.display = 'none';
-    errorMsgNeg.style.display = 'block';
-    savingAmount.innerText = "";
-    lastBalance.innerText = "";
-   }
+    else {
+        errorMsgSaving.style.display = 'none';
+        errorMsgNeg.style.display = 'block';
+        savingAmount.innerText = "";
+        lastBalance.innerText = "";
+    }
 }
