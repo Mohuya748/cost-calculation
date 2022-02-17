@@ -67,5 +67,7 @@ function save() {
    else{
     errorMsgSaving.style.display = 'none';
     errorMsgNeg.style.display = 'block';
+    savingAmount.innerText = "";
+    lastBalance.innerText = "";
    }
 }
