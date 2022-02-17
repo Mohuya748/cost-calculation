@@ -23,7 +23,7 @@ function minusValue(firstValue, secondValue) {
 }
 //--------------calculate button -----------
 function calculate() {
-    if (inputValue("income-input") > 0 && inputValue("food-input") > 0 && inputValue("rent-input") > 0 && inputValue("cloths-input") > 0) {
+    if (inputValue("income-input")>0 && inputValue("food-input")>0 && inputValue("rent-input")>0 && inputValue("cloths-input")>0) {
         errorMsg.style.display = 'none';
         let expenses = addValue(inputValue("food-input"), inputValue("rent-input"), inputValue("cloths-input"));
         totalExpenses.innerText = expenses;
@@ -38,7 +38,10 @@ function calculate() {
         }
     }
     else {
+        totalExpenses.innerText = 0;
+        balance.innerText = 0;
         errorMsg.style.display = 'block';
+        
     }
 }
 

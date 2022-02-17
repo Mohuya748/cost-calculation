@@ -52,17 +52,22 @@
                 <button id="" onclick="calculate()"
                     class="bg-slate-400 px-6 py-2 rounded border-2 border-white font-semibold ">Calculate
                 </button>
+                <!-- error handelling  -->
+                <div class="error-section">
+                    <p id="error-msg" class="error "><i class="fa-solid fa-square-xmark"></i> Please give a positive number in each field.</p>
+                </div>
+
                 <h2 class="block m-6 text-2xl font-semibold text-black">Total expenses :<span
                         id="total-expenses">0</span></h1>
                     <h2 class="block m-6 text-2xl font-semibold text-black">Balance :<span id="balance">0</span></h1>
 
             </div>
-
             <!-- error handelling  -->
             <div class="error-section">
-                <p id="error-msg" class="error "><i class="fa-solid fa-square-xmark"></i> Please give a positive number in each field.</p>
                 <p id="error-msg-saving" class="error">Sorry!! you don't have enough money to save:(</p>
             </div>
+
+
 
             <!-- saving section  -->
             <div class="text-center w-3/4  mx-auto mt-8 ">
@@ -82,7 +87,7 @@
         </section>
     </main>
 
-<!-- js script add  -->
+    <!-- js script add  -->
     <script src="script.js"></script>
 </body>
 
