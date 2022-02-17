@@ -1,11 +1,15 @@
+
+/* header icon style  */
 .fa-solid{
     color: gold;
 }
+
+/* error section sttyle  */
 .error {
     color: #fff;
     text-align: center;
     margin: 0 auto;
-    background: #f32121f1;
+    background: #f32121a1;
     margin-top: 20px;
     border-radius: 15px;
     padding: 5px 20px;
